@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disco Ligth</title>
+</head>
+<body>
+    <input type="button" value="Start Background" onclick="startB()">
+    <input type="button" value="Stop Background" onclick="stopB()">
+    <input type="button" value="Start Forground" onclick="startF()">
+    <input type="button" value="Stop Forground" onclick="stopF()">
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro, totam voluptas corporis quos a est. Doloremque voluptatum dolorum culpa? Ducimus sequi debitis, at odio neque alias nam commodi aliquam sunt porro saepe quisquam eveniet excepturi doloremque aspernatur facere corrupti aperiam rerum id quis deleniti in, blanditiis libero. Eum laboriosam veniam tenetur! Sed laudantium quasi soluta numquam et, consectetur incidunt molestias, velit ex sunt repudiandae nisi quae odio totam mollitia assumenda enim perferendis amet facilis iusto consequuntur quam distinctio voluptatum iure! Sunt expedita, laudantium modi itaque beatae vero, ut quos qui laboriosam inventore hic repudiandae, deleniti ad. Minus, in explicabo eveniet, minima vero quisquam perspiciatis nam dolore eligendi doloremque quidem, corporis magnam fuga accusamus labore error voluptate velit porro recusandae! Eos dolorum ab dolorem ipsa iure nesciunt aperiam ipsum est, officia odit accusantium asperiores ducimus animi fugit harum aut impedit doloribus in magni, culpa consequatur quae? Quis dolorum suscipit temporibus ratione ipsam? Cumque quo expedita quisquam, obcaecati libero esse at repellat omnis perspiciatis officia cum, quos iusto amet iste sint ea asperiores. Qui dolores, magnam corporis optio assumenda culpa dolor rerum ducimus, sit tenetur asperiores nam minima voluptatem laboriosam sequi adipisci commodi iste! Impedit quaerat harum, adipisci nulla fugiat in quia ipsum repudiandae dolores modi aliquid expedita hic obcaecati reiciendis molestias sapiente veritatis quas sequi, temporibus numquam officiis. Nobis expedita a aspernatur fugiat in modi voluptas quos aliquam quasi? Placeat illo iure amet itaque quo eligendi eius dolores veritatis magni suscipit sunt, error id tenetur quis nemo, est maiores, ipsa doloremque. Sapiente iure ratione sit. Cum facere repellendus ea consectetur aliquid unde esse corrupti quae perferendis harum suscipit magni numquam eveniet, exercitationem, incidunt qui! Consequatur, repellat quas earum pariatur ab deserunt assumenda enim vero nemo consectetur totam beatae asperiores. Sunt est odit mollitia saepe doloribus corporis voluptatem eum unde neque, voluptatibus magni omnis assumenda tempore nihil praesentium repellendus adipisci, beatae excepturi nam architecto porro quod harum rem. Eveniet quod quam ab delectus esse eos quis laudantium explicabo illum doloremque, nemo dolores ducimus, et reiciendis quidem voluptas quibusdam ipsa voluptates praesentium, a est atque illo. Cum vel provident quaerat eaque maiores optio, ab rerum voluptates hic excepturi dolore fugiat tenetur eos neque pariatur magni, totam esse tempore autem dignissimos temporibus. Sed iure minima corrupti est sunt fugiat delectus expedita deserunt provident, nobis, quis ut et! Culpa delectus aliquam accusamus nemo dolorum, nam in corporis dolores numquam architecto voluptatum, sapiente quos, cupiditate doloribus? Nulla obcaecati unde, id fugiat voluptatem temporibus quaerat provident excepturi molestias sed minima, molestiae sapiente incidunt fugit vitae, magnam illo dolorem! Sint dolor perspiciatis dignissimos laboriosam possimus est aliquid accusamus delectus deleniti illum nihil nobis perferendis, temporibus ex reiciendis repudiandae quis. Voluptatem, soluta! Inventore accusantium nihil tempore cumque eum eaque explicabo qui tempora! Accusantium dolor dolores cum, alias nostrum placeat consectetur nobis velit sapiente sequi quidem, possimus culpa, facilis similique totam fugit. Tenetur architecto, vel ab enim, blanditiis officia eum nobis ipsam animi officiis eaque? Soluta placeat tenetur, inventore excepturi dolorem tempore? Praesentium error quisquam, dolorum maiores esse nobis?
+    </p>
+    <script>
+        c1 = setInterval(Bg, 700);
+        c2 = setInterval(Fg, 700);
+
+        function Bg(){
+            var r = Math.ceil(Math.random()*255);
+            var g = Math.ceil(Math.random()*255);
+            var b = Math.ceil(Math.random()*255);
+
+            document.body.style.backgroundColor = "rgb("+r+", "+g+", "+b+")";
+        }
+        function Fg(){
+            var r = Math.ceil(Math.random()*255);
+            var g = Math.ceil(Math.random()*255);
+            var b = Math.ceil(Math.random()*255);
+            document.getElementById('para').style.color = "rgb("+r+", "+g+", "+b+")";
+        }
+        function startB(){
+            c1 = setInterval(Bg, 700);
+        }
+        function stopB(){
+            clearInterval(c1);
+        }
+        function startF(){
+            c2 = setInterval(Fg, 700);
+        }
+        function stopF(){
+            clearInterval(c2);
+        }
+    </script>
+</body>
+</html>
