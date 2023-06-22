@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = prompt("Enter First Number");
+        b = prompt("Enter Second Number");
+
+        a1 = parseInt(a);
+        b1 = parseInt(b);
+
+        c = prompt("Enter + for sum, Enter - for substraction, Enter * for multiplication, Enter / for division");
+
+        ans = 0;
+        switch(c){
+            case '+':
+                ans = a1 + b1;
+            break;
+
+            case '-':
+                ans = a1 - b1;
+            break;
+
+            case '*':
+                ans = a1 * b1;
+            break;
+
+            case '/':
+                ans = a1 / b1;
+            break;
+            default:
+                ans = 0;
+        }
+
+        document.write("Your answer is: "+ ans);
+    </script>
+</body>
+</html>
