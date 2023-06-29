@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        n = parseInt(prompt("Enter how many element do you want to enter? "));
+
+        a = [];
+
+        for(i=0; i<n; i++){
+            a.push(parseInt(prompt("Enter element")));
+        }
+
+        var max = a[0];
+        for(j=0; j<a.length-1; j++){
+            if(a[j] > max){
+                max = a[j];
+            }
+        }
+        document.write("Max is: "+max);
+    </script>
+</body>
+</html>

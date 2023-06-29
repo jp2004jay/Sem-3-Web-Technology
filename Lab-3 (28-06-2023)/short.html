@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = prompt("Enter array");
+        arrayDigit = a.split(", ");
+        b = [];
+        for(temp of arrayDigit){
+            b.push(parseInt(temp));
+        }
+        for(i=0; i<b.length-1; i++){
+            for(j=i; j<b.length; j++){
+                if(b[i] > b[j]){
+                    temp = b[i];
+                    b[i] = b[j];
+                    b[j] = temp;
+                }
+            }
+        }
+        document.write(b);
+    </script>
+</body>
+</html>
