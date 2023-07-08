@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="fruitsShow()">
+    <div id="life-line"></div>
+    <h1 id="score-board">
+        0
+    </h1>
+
+    <table id="arrow" align="right">
+        <tr>
+            <td></td>
+            <td><img src="./image/button/up-arrow.png" alt="up-arrow" onclick="upArrowPress()"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><img src="./image/button/left-arrow.png" alt="left-arrow" onclick="leftArrowPress()"></td>
+            <td><img src="./image/button/down-arrow.png" alt="down-arrow" onclick="dowmArrowPress()"></td>
+            <td><img src="./image/button/right-arrow.png" alt="right-arrow" onclick="rightArrowPress()"></td>
+        </tr>
+    </table>
+
+    <img id="snake" class="size-element" src="./image/snake/snakeL.png" alt="snake">
+
+    <img id="angur" class="size-element" src="./image/fruits/angur.png" alt="angur-fruit">
+
+    <img id="apple" class="size-element" src="./image/fruits/apple.png" alt="apple-fruit">
+
+    <img id="banana" class="size-element" src="./image/fruits/banana.png" alt="banana-fruit">
+
+    <img id="papita" class="size-element" src="./image/fruits/papita.png" alt="papita-fruit">
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
