@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        .container {
+            width: 60vh;
+            position: absolute;
+            top: 20%;
+            left: 38%;
+            border: 2px dashed blue;
+            border-radius: 10vh 5vh;
+            padding: 5vh;
+        }
+
+        #Login {
+            font-size: 2em;
+            color: brown;
+            font-weight: bold;
+        }
+
+        #validateEmailDiv {
+            font-weight: bold;
+            color: red;
+        }
+
+        #validatePasswordDiv {
+            font-weight: bold;
+            color: red;
+        }
+
+        .form-label {
+            font-size: 1.2em !important;
+            font-weight: bold;
+            color: rgb(0, 81, 255);
+        }
+    </style>
+</head>
+
+<body onload="getData()">
+
+    <div class="container">
+        <div class="row">
+            <div id="Login" class="mb-3">
+                Login
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <div id="validateEmailDiv"></div>
+            </div>
+
+            <div class="mb-3">
+                <label for="inputPassword5" class="form-label">Password</label>
+                <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock">
+                <div id="validatePasswordDiv"></div>
+            </div>
+
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary" onclick="validationForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        database = [
+            {
+                id: 1,
+                name: "Abhishek Zatakiya",
+                email: "abhishek45@gmail.com",
+                password: "Abhi123@#"
+            },
+            {
+                id: 2,
+                name: "Bhargav Javiya",
+                email: "bhargav234@gmail.com",
+                password: "Bhargav234#@"
+            },
+            {
+                id: 3,
+                name: "Jay Ramani",
+                email: "ramanijay2004@gmail.com",
+                password: "Jay2004@#"
+            }
+        ];
+
+        email = document.getElementById('exampleFormControlInput1');
+        password = document.getElementById('inputPassword5');
+        validateEmailDiv = document.getElementById('validateEmailDiv');
+        validPassDiv = document.getElementById('validatePasswordDiv');
+
+        var patternEmail = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
+        validateEmail = new RegExp(patternEmail);
+
+        var patternPasswords = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$";
+        validatePass = new RegExp(patternPasswords);
+
+        function validationForm() {
+            if (validateEmail.test(email.value)) {
+                email.style.border = "2px solid green";
+                validateEmailDiv.innerHTML = "";
+
+                if (validatePass.test(password.value)) {
+                    password.style.border = "2px solid green";
+                    validPassDiv.innerHTML = "";
+
+                    for (temp of database) {
+                        if (email.value == temp.email && password.value == temp.password) {
+                            Swal.fire('Welcome to Darshan\'s Club. \n' + temp.name);
+                            break;
+                        }
+                        else {
+                            Swal.fire('Sorry! You are not a member of Darshan\'s Club. \nPlease Contact to your H.O.D.');
+                        }
+                    }
+                }
+                else {
+                    password.style.border = "2px solid red";
+                    validPassDiv.innerHTML = "Your password must be 8-12 characters long, contain letters and numbers, and must contain a  special characters, and must not contain spaces or emoji.";
+                }
+            }
+            else {
+                email.style.border = "2px solid red";
+                validateEmailDiv.innerHTML = "Please enter a valid email";
+            }
+
+
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #my-btn{
+            font-size: 1.5em;
+            color: blue;
+            background-color: wheat;
+            border: 2px solid brown;
+            border-radius: 20vh 30vh;
+            padding: 3vh 5vh;
+        }
+        #my-btn:hover{
+            background-color: rgba(245, 222, 179, 0.69);
+        }
+        #this-show{
+            font-size: 2em;
+            color: white;
+        }
+    </style>
+</head>
+<body id="body-this" onload="changeBg()">
+    
+    <input id="my-btn" type="button" value="Which Mouse Event" onclick="onClickEventFired()" ondblclick="onDoubleClickEventFired()" onmousedown="mouseDownEventFired()" onmousemove="mouseMoveEventFired()" onmouseover="mouseOverEventFired()" onmouseout="mouseOutEventFired()" onmouseup="mouseUpEventFired()">
+    <div id="this-show">
+
+    </div>
+
+    <script>
+
+        let myBtn = document.getElementById('my-btn');
+        let showMenu = document.getElementById('this-show');
+        let bodyMine = document.getElementById('body-this');
+
+        function changeBg(){
+            r = Math.ceil(Math.random()*255);
+            g = Math.ceil(Math.random()*255);
+            b = Math.ceil(Math.random()*255);
+
+            bodyMine.style.backgroundColor = 'rgb('+r+', '+g+', '+b+')';
+        }
+        function onClickEventFired(){
+            showMenu.innerHTML = 'Mouse Click Event Fired';
+            changeBg()
+        }
+        function onDoubleClickEventFired(){
+            showMenu.innerHTML = 'Mouse Double Click Event Fired';
+            changeBg()
+        }
+        function mouseDownEventFired(){
+            showMenu.innerHTML = 'Mouse Down Event Fired';
+            changeBg()
+        }
+        function mouseMoveEventFired(){
+            showMenu.innerHTML = 'Mouse Move Event Fired';
+            changeBg()
+        }
+        function mouseOverEventFired(){
+            showMenu.innerHTML = 'Mouse Over Event Fired';
+            changeBg()
+        }
+        function mouseOutEventFired(){
+            showMenu.innerHTML = 'Mouse Out Event Fired';
+            changeBg()
+        }
+        function mouseUpEventFired(){
+            showMenu.innerHTML = 'Mouse Up Event Fired';
+            changeBg()
+        }
+    </script>
+</body>
+</html>

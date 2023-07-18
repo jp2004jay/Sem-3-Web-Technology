@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my-btn{
+            font-size: 1.5em;
+            color: blue;
+            background-color: wheat;
+            border: 2px solid brown;
+            border-radius: 20vh 30vh;
+            padding: 3vh 5vh;
+        }
+        #my-btn:hover{
+            background-color: rgba(245, 222, 179, 0.69);
+        }
+        #this-show{
+            font-size: 2em;
+            color: white;
+        }
+    </style>
+</head>
+<body onload="changeBg()" id="body-this" onkeypress="onKeyPressEvent()" onkeyup="onKeyUpEvent()" onkeydown="onKeyDownEvent()">
+
+    <div id="this-show">
+        Any Key Press
+    </div>
+
+    <script>
+
+        let myBtn = document.getElementById('my-btn');
+        let showMenu = document.getElementById('this-show');
+        let bodyMine = document.getElementById('body-this');
+
+        function changeBg(){
+            r = Math.ceil(Math.random()*255);
+            g = Math.ceil(Math.random()*255);
+            b = Math.ceil(Math.random()*255);
+
+            bodyMine.style.backgroundColor = 'rgb('+r+', '+g+', '+b+')';
+        }
+        function onKeyPressEvent(){
+            showMenu.innerHTML = 'On Key Press Event Fired';
+            changeBg()
+        }
+        function onKeyUpEvent(){
+            showMenu.innerHTML = 'On Key Up Event Fired';
+            changeBg()
+        }
+        function onKeyDownEvent(){
+            showMenu.innerHTML = 'On Key Down Event Fired';
+            changeBg()
+        }
+    </script>
+</body>
+</html>

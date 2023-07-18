@@ -26,6 +26,20 @@ bL = 0;
 pT = 0;
 pL = 0;
 
+// snake.addEventListener(onkeypress(screenLeft), leftArrowPress);
+document.onkeydown = (e) => {
+    e = e || window.event;
+    if (e.keyCode === 38) {
+        upArrowPress();
+    } else if (e.keyCode === 40) {
+        dowmArrowPress();
+    } else if (e.keyCode === 37) {
+        leftArrowPress();
+    } else if (e.keyCode === 39) {
+        rightArrowPress();
+    }
+};
+
 function leftArrowPress(){
     clearInterval(r);
     clearInterval(l);
@@ -93,9 +107,7 @@ function rightSide() {
     else if(snakePos > (appL-25) && (snakePosTD-25)<appT && (snakePosTD+70) >appT){
         appleShow();
         scoring();
-
     }
-
     else if(snakePos > (bL-25) && (snakePosTD-25)<bT && (snakePosTD+70) >bT){
         bananaShow()
         scoring();
@@ -208,11 +220,23 @@ function lifeLineManager(){
         hearts.innerHTML += '<img src="./image/hearts.png"/>';
     }
     if(life<=0){
-        alert("game is over \nYour score is: "+score);
+        Swal.fire({
+            title: 'Game Over \nYour score is: '+score,
+            width: 600,
+            padding: '3em',
+            color: '#716add',
+            background: '#fff',
+            backdrop: `
+              rgb(0, 255, 255, 0.3)
+              url(./image/snake/snakeR.png)
+              left top
+              no-repeat
+            `
+          })
+
         score = 0;
         life = 6;
         scoreBoard.innerHTML = "0"
         fruitsShow();
     }
-    console.log(life)
 }

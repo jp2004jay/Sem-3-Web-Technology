@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        .col-3{
+            padding: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        a = [
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/808.jpg",
+                "name": "Ryan Lakin",
+                "experiance": 33862,
+                "id": "1"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/848.jpg",
+                "name": "James Hoeger",
+                "experiance": 40230,
+                "id": "2"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/673.jpg",
+                "name": "Dorothy Lind",
+                "experiance": 74601,
+                "id": "3"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/555.jpg",
+                "name": "Mr. Beatrice Lehner",
+                "experiance": 80528,
+                "id": "4"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/244.jpg",
+                "name": "Enrique Jakubowski",
+                "experiance": 19272,
+                "id": "5"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/520.jpg",
+                "name": "Sadie Schiller",
+                "experiance": 12285,
+                "id": "6"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/679.jpg",
+                "name": "Raquel Berge Jr.",
+                "experiance": 80512,
+                "id": "7"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/843.jpg",
+                "name": "Leonard Deckow",
+                "experiance": 65080,
+                "id": "8"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/955.jpg",
+                "name": "Calvin Howell",
+                "experiance": 58226,
+                "id": "9"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1096.jpg",
+                "name": "Krystal Murphy",
+                "experiance": 88498,
+                "id": "10"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/102.jpg",
+                "name": "Kayla Schaden Sr.",
+                "experiance": 98557,
+                "id": "11"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1131.jpg",
+                "name": "Terri Heaney",
+                "experiance": 40815,
+                "id": "12"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/675.jpg",
+                "name": "Bernadette Wuckert",
+                "experiance": 50435,
+                "id": "13"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/357.jpg",
+                "name": "Meghan Altenwerth",
+                "experiance": 84468,
+                "id": "14"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/174.jpg",
+                "name": "Dewey Shields",
+                "experiance": 8752,
+                "id": "15"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/648.jpg",
+                "name": "Ms. Diane Wuckert",
+                "experiance": 54175,
+                "id": "16"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/752.jpg",
+                "name": "Garry Schneider",
+                "experiance": 74705,
+                "id": "17"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1172.jpg",
+                "name": "Mrs. Alejandro Ward",
+                "experiance": 51713,
+                "id": "18"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/652.jpg",
+                "name": "Troy Pfannerstill",
+                "experiance": 58694,
+                "id": "19"
+            },
+            {
+                "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/253.jpg",
+                "name": "Wanda Jacobson",
+                "experiance": 90503,
+                "id": "20"
+            }
+        ]
+
+        document.write('<div class="container">');
+        document.write('<div class="row">');
+        for (fac of a) {
+            document.write('<div class="col-3" id ="'+fac.id+'">');
+            document.write('<div class="card" style="width: 18rem;">');
+            document.write('<img src="'+fac.avatar+'" class="card-img-top" alt="...">');
+            document.write('<div class="card-body">');
+            document.write('<h4 class="card-title">'+fac.name+'</h4>');
+            document.write('<h6 class="experience">'+fac.experiance+'</h6>');
+            document.write('<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card         content.</p>');
+            document.write('<a href="#" class="btn btn-danger" onclick="deleteFac('+fac.id+')">Delete</a>');
+            document.write('</div>');
+            document.write('</div>');
+            document.write('</div>');
+        }
+        document.write('</div>');
+        document.write('</div>');
+
+        function deleteFac(facId){
+            document.getElementById(facId).style.display = 'none';
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

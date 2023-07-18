@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #this-show{
+            font-size: 2em;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input id="text-box" type="text" onblur="blureEvent()" onchange="" onfocus="" onreset="" onselect="" onsubmit="">
+    <div id="this-show">
+    </div>
+    <script>
+        textBox = document.getElementById('text-box');
+        showingField = document.getElementById('this-show');
+
+        function blureEvent(){
+            showingField.innerHTML = 'Blur Event Fired';
+        }
+    </script>
+</body>
+</html>
