@@ -74,7 +74,7 @@
     </style>
 </head>
 
-<body>
+<body onkeypress="whichKey(event)">
     <div id="main">
         <div id="main-inner">
             <table width="100%" border="2" valign="center" cellspacing="10">
@@ -131,18 +131,47 @@
             expression.innerHTML = evaluateString;
         }
 
-        
+
         function clearMy() {
             expression.innerHTML = 0;
             evaluateString = "";
         }
 
-        function evaluateMyDefault(){
+        function evaluateMyDefault() {
             ans = eval(evaluateString);
             evaluateString = ans;
             expression.innerHTML = evaluateString;
         }
 
+        function whichKey(e) {
+            if (e.keyCode == 46) {
+                inputDigit(".");
+            }
+            else if (e.keyCode == 43) {
+                inputDigit("+");
+            }
+            else if (e.keyCode == 45) {
+                inputDigit("-");
+            }
+            else if (e.keyCode == 42) {
+                inputDigit("*");
+            }
+            else if (e.keyCode == 47) {
+                inputDigit("/");
+            }
+            else if (e.keyCode == 37) {
+                inputDigit("%");
+            }
+            else if (e.keyCode >= 48 && e.keyCode <= 57) {
+                inputDigit(e.keyCode - 48 + "");
+            }
+            else if(e.keyCode == 65 || e.keyCode == 97){
+                clearMy();
+            }
+            else if(e.keyCode == 13){
+                evaluateMyDefault();
+            }
+        }
     </script>
 </body>
 

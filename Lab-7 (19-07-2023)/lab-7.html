@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        /* Demonstrate CallBack in JavaScript */
+        msg = () => {
+            console.log("Sum is done!");
+        }
+        sum = (num1, num2, callBack) => {
+            console.log(num1+num2);
+            return callBack();
+        }
+        sum(2, 3, msg);
+    </script> -->
+
+    <!-- <script>
+        /* Demonstrate between "let" and "var" Keyword */   
+        msgVar = () => {
+            for(i=0; i<1; i++){
+                var a = "Zantu";
+                console.log("Inner Block: "+ a);
+            }
+            console.log("Outer Block: "+ a);
+        }
+
+        msgLet = () => {
+            for(i=0; i<1; i++){
+                let a = "Zantu2";
+                console.log("Inner Block: "+ a);
+            }
+            console.log("Outer Block: "+ a);
+        }
+        msgVar();
+        msgLet();
+    </script> -->
+
+    <!-- <script>
+        student = {
+            name : "Abhishek",
+            age : 37,
+            printStudentDetails : function () {
+                console.log("Name: "+ this.name + "\nAge: "+ this.age);
+            }
+        }
+        student.printStudentDetails()
+        console.log(student.printStudentDetails());
+    </script> -->
+
+    <!-- <script>
+        var oneKindOfData = "Arjun-Bala-3-CSE#PradyumanSir-Jadeja-7-IT#Krunal-Sir-1-CSE";
+        var allStudent = [];
+        var studentObj = {
+            firstName : " ",
+            lastName : " ",
+            sem : " ",
+            dept : " "
+        }
+
+        for(let student of oneKindOfData.split('#')){
+            let finalData = student.split('-');
+            var studentObjSpread = {...studentObj, firstName : finalData[0], lastName : finalData[1], sem : finalData[2], dept : finalData[3]};    
+            allStudent.push(studentObjSpread);
+        }
+        console.log(allStudent);
+    </script> -->
+
+    
+</body>
+</html>
